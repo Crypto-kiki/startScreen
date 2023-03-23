@@ -14,11 +14,17 @@ body main {
   justify-content: center;
   align-items: center;
 }
-body main .time {
-  font-size: 60px;
-  border: 10px solid green;
-  border-radius: 10px;
-  padding: 10px;
+body main div {
+  text-shadow: 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+body main .time1 {
+  font-size: 80px;
+}
+body main .time2 {
+  font-size: 80px;
+  opacity: 0.3;
+  transform: scaleY(-1);
+  transition: 1s;
 }
 
 .bg-video {

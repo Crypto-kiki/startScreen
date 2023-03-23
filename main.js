@@ -1,6 +1,6 @@
-const time = document.querySelector(".time");
+const time1 = document.querySelector(".time1");
 
-function getTime() {
+function getTime1() {
   const newDate = new Date();
 
   const hours = String(newDate.getHours()).padStart(2, "0");
@@ -12,12 +12,12 @@ function getTime() {
   // }
 
   // time.innerHTML = hours + ":" + minutes + ":" + seconds + ":";
-  time.innerHTML = `${hours}:${minutes}:${seconds}`;
+  time1.innerHTML = `${hours}:${minutes}:${seconds}`;
 }
 
-getTime();
+getTime1();
 
-setInterval(getTime, 1000);
+setInterval(getTime1, 1000);
 
 // padstart 라는 함수 알아보기
 /*
@@ -26,3 +26,20 @@ setInterval(getTime, 1000);
 	'0xh662" 가 나옴
 	a. padStart에서 6은 6글자를 만들고싶고, 빈 자리에는 0x 를 채워라
 	*/
+
+// 상하반전
+const time2 = document.querySelector(".time2");
+
+function getTime2() {
+  const newDate = new Date();
+
+  const hours = String(newDate.getHours()).padStart(2, "0");
+  const minutes = String(newDate.getMinutes()).padStart(2, "0");
+  const seconds = String(newDate.getSeconds()).padStart(2, "0");
+
+  time2.innerHTML = `${hours}:${minutes}:${seconds}`;
+}
+
+getTime2();
+
+setInterval(getTime2, 1000);
