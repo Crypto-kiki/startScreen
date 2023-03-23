@@ -14,17 +14,32 @@ body main {
   justify-content: center;
   align-items: center;
 }
-body main div {
-  text-shadow: 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
-}
 body main .time1 {
   font-size: 80px;
+  text-shadow: 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
 }
 body main .time2 {
   font-size: 80px;
+  text-shadow: 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   opacity: 0.3;
   transform: scaleY(-1);
   transition: 1s;
+}
+body main .quotes {
+  position: relative;
+}
+body main .quotes .quotesAddBtn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+body main .quotes:hover .quotesAddBtn {
+  display: inline-block;
+}
+body main .newQuotes {
+  display: none;
 }
 
 .bg-video {

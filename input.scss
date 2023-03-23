@@ -16,19 +16,42 @@ body {
     align-items: center;
 
     // mixin 쓰기
-    div {
-      text-shadow: /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
-        0 0 102px #0fa, 0 0 151px #0fa;
-    }
 
     .time1 {
       font-size: 80px;
+      text-shadow: /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+        0 0 102px #0fa, 0 0 151px #0fa;
     }
     .time2 {
       font-size: 80px;
+      text-shadow: /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa,
+        0 0 102px #0fa, 0 0 151px #0fa;
       opacity: 0.3;
       transform: scaleY(-1);
       transition: 1s;
+    }
+
+    .quotes {
+      position: relative;
+
+      .quotesAddBtn {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        // 정 가운데 맞추기 위해 transform 써야됨.
+        transform: translate(50%, -50%);
+      }
+
+      &:hover {
+        .quotesAddBtn {
+          display: inline-block;
+        }
+      }
+    }
+
+    .newQuotes {
+      display: none;
     }
   }
 }
