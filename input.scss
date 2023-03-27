@@ -1,3 +1,12 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -30,6 +39,73 @@ body {
       transform: scaleY(-1);
       transition: 1s;
     }
+
+    .search {
+      .searchLogo {
+        width: 32px;
+        height: 32px;
+        animation: spin 1s linear infinite;
+        // linear 속성값은 동일한 속도로 돌아감
+      }
+    }
+
+    .searchResult {
+      display: none;
+    }
+  }
+
+  .nft {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 24px;
+    // border-radius: 9999px;
+    // overflow: hidden;
+
+    img {
+      width: 128px;
+      height: 128px;
+    }
+
+    .nftHover {
+      position: absolute;
+      display: none;
+      width: 128px;
+      height: 128px;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      a {
+        color: white;
+      }
+
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: -8px;
+        border-radius: 999px;
+        width: 24px;
+        height: 24px;
+        // 완전한 원형을 주려면 가로/세로 값을 줘야 함.
+      }
+    }
+    &:hover {
+      .nftHover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .nftView {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 24px;
+    display: none;
   }
 }
 
